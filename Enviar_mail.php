@@ -1,5 +1,10 @@
 <?php 
 
+if($_POST["nombre"]==""||$_POST["apellido"]==""||$_POST["email"]==""||$_POST["comentarios"]==""){
+	echo "Ha habido un error, campos oblitaririos sin llenar";
+	die();
+}
+
 $texto_mail=$_POST["comentarios"];
 $destinatario=$_POST["email"];
 $asunto=$_POST["asunto"];
